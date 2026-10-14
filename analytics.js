@@ -5,6 +5,8 @@
   if (typeof id !== 'string' || !/^G-[A-Z0-9]+$/.test(id)) return;
   if (location.protocol !== 'https:' || location.hostname !== 'chacha2002-spec.github.io') return;
   if (!location.pathname.startsWith('/nail-art-maker/')) return;
+  var language = ['en','ja'].includes(document.documentElement.lang) ? document.documentElement.lang : 'ko';
+  var copy = {ko:['방문 통계 선택','방문 통계를 수집해도 될까요? Google Analytics로 이용 현황을 확인합니다. 거부해도 모든 편집 기능을 사용할 수 있어요.','허용','거부','자세히'],en:['Visitor statistics choice','May we collect visitor statistics with Google Analytics? You can decline and still use every editing feature.','Allow','Decline','Details'],ja:['訪問統計の選択','Google Analyticsで訪問統計を収集してもよいですか？拒否しても全ての編集機能を利用できます。','許可','拒否','詳細']}[language];
   var choiceKey = 'nail-statistics-consent-v1', banner;
   function readChoice() { try { return localStorage.getItem(choiceKey); } catch (_) { return null; } }
   function record(value) { try { localStorage.setItem(choiceKey, value); } catch (_) {} }
@@ -59,16 +61,17 @@
   function show() {
     if (banner) return;
     banner = document.createElement('section');
-    banner.setAttribute('role', 'region'); banner.setAttribute('aria-label', '방문 통계 선택');
+    banner.setAttribute('role', 'region'); banner.setAttribute('aria-label', copy[0]);
     banner.style.cssText = 'position:fixed;z-index:1000;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));max-width:560px;margin:auto;padding:16px;box-sizing:border-box;background:#fffdfb;color:#332d2b;border:1px solid #ddd5cf;border-radius:8px;box-shadow:0 4px 22px #0002;font:14px/1.6 system-ui,sans-serif';
     var text = document.createElement('p');
-    text.textContent = '방문 통계를 수집해도 될까요? Google Analytics로 이용 현황을 확인합니다. 거부해도 모든 편집 기능을 사용할 수 있어요.';
+    text.textContent = copy[1];
     text.style.cssText = 'margin:0 0 12px'; banner.appendChild(text);
     var actions = document.createElement('div'); actions.style.cssText = 'display:flex;gap:8px;align-items:center;flex-wrap:wrap';
-    actions.appendChild(button('허용', grant)); actions.appendChild(button('거부', decline));
-    var link = document.createElement('a'); link.href = '/nail-art-maker/privacy.html'; link.textContent = '자세히'; link.style.cssText = 'margin-left:auto;color:#665650;font-size:13px'; actions.appendChild(link);
+    actions.appendChild(button(copy[2], grant)); actions.appendChild(button(copy[3], decline));
+    var link = document.createElement('a'); link.href = '/nail-art-maker/privacy' + (language === 'ko' ? '' : '-' + language) + '.html'; link.textContent = copy[4]; link.style.cssText = 'margin-left:auto;color:#665650;font-size:13px'; actions.appendChild(link);
     banner.appendChild(actions); document.body.appendChild(banner);
   }
+  window.addEventListener('nail-language-change', function(){ language = document.documentElement.lang; copy = {ko:['방문 통계 선택','방문 통계를 수집해도 될까요? Google Analytics로 이용 현황을 확인합니다. 거부해도 모든 편집 기능을 사용할 수 있어요.','허용','거부','자세히'],en:['Visitor statistics choice','May we collect visitor statistics with Google Analytics? You can decline and still use every editing feature.','Allow','Decline','Details'],ja:['訪問統計の選択','Google Analyticsで訪問統計を収集してもよいですか？拒否しても全ての編集機能を利用できます。','許可','拒否','詳細']}[language]; if (banner) { removeBanner(); show(); } });
   window.nailStatisticsSettings = show;
   document.querySelectorAll('[data-statistics-settings]').forEach(function (b) { b.addEventListener('click', show); });
   var choice = readChoice();
