@@ -1,0 +1,218 @@
+{
+  "app": "nail-atelier",
+  "version": 1,
+  "st": {
+    "shape": "almond",
+    "len": 0.66,
+    "nails": [
+      {
+        "c": "#b9c1c8",
+        "o": 0.94,
+        "fin": "chrome",
+        "des": "none",
+        "dc": "#ffffff",
+        "mo": [],
+        "it": []
+      },
+      {
+        "c": "#32373b",
+        "o": 0.94,
+        "fin": "jelly",
+        "des": "none",
+        "dc": "#ffffff",
+        "mo": [],
+        "it": [
+          {
+            "k": "cyb2",
+            "x": 0,
+            "y": 0.51,
+            "s": 1.5,
+            "r": 0,
+            "sd": 3,
+            "c": "#ffffff"
+          }
+        ]
+      },
+      {
+        "c": "#cad1d4",
+        "o": 0.94,
+        "fin": "chrome",
+        "des": "none",
+        "dc": "#ffffff",
+        "mo": [],
+        "it": [
+          {
+            "k": "cyb6",
+            "x": 0,
+            "y": 0.5,
+            "s": 1.5,
+            "r": 0,
+            "sd": 3,
+            "c": "#ffffff"
+          }
+        ]
+      },
+      {
+        "c": "#ebe8e3",
+        "o": 0.94,
+        "fin": "milky",
+        "des": "none",
+        "dc": "#ffffff",
+        "mo": [],
+        "it": [
+          {
+            "k": "stud",
+            "x": -0.18,
+            "y": 0.7,
+            "s": 0.6,
+            "r": 0,
+            "sd": 3,
+            "c": "#ffffff"
+          },
+          {
+            "k": "stud",
+            "x": 0.14,
+            "y": 0.5,
+            "s": 0.5,
+            "r": 0,
+            "sd": 3,
+            "c": "#ffffff"
+          },
+          {
+            "k": "stud",
+            "x": -0.1,
+            "y": 0.3,
+            "s": 0.45,
+            "r": 0,
+            "sd": 3,
+            "c": "#ffffff"
+          }
+        ]
+      },
+      {
+        "c": "#777f86",
+        "o": 0.94,
+        "fin": "cateye",
+        "des": "none",
+        "dc": "#ffffff",
+        "mo": [],
+        "it": [
+          {
+            "k": "mstar",
+            "x": 0,
+            "y": 0.52,
+            "s": 1.1,
+            "r": 0,
+            "sd": 3,
+            "c": "#ffffff"
+          }
+        ]
+      },
+      {
+        "c": "#777f86",
+        "o": 0.94,
+        "fin": "cateye",
+        "des": "none",
+        "dc": "#ffffff",
+        "mo": [],
+        "it": [
+          {
+            "k": "mstar",
+            "x": 0,
+            "y": 0.52,
+            "s": 1.1,
+            "r": 0,
+            "sd": 3,
+            "c": "#ffffff"
+          }
+        ]
+      },
+      {
+        "c": "#ebe8e3",
+        "o": 0.94,
+        "fin": "milky",
+        "des": "none",
+        "dc": "#ffffff",
+        "mo": [],
+        "it": [
+          {
+            "k": "stud",
+            "x": -0.18,
+            "y": 0.7,
+            "s": 0.6,
+            "r": 0,
+            "sd": 3,
+            "c": "#ffffff"
+          },
+          {
+            "k": "stud",
+            "x": 0.14,
+            "y": 0.5,
+            "s": 0.5,
+            "r": 0,
+            "sd": 3,
+            "c": "#ffffff"
+          },
+          {
+            "k": "stud",
+            "x": -0.1,
+            "y": 0.3,
+            "s": 0.45,
+            "r": 0,
+            "sd": 3,
+            "c": "#ffffff"
+          }
+        ]
+      },
+      {
+        "c": "#cad1d4",
+        "o": 0.94,
+        "fin": "chrome",
+        "des": "none",
+        "dc": "#ffffff",
+        "mo": [],
+        "it": [
+          {
+            "k": "cyb6",
+            "x": 0,
+            "y": 0.5,
+            "s": 1.5,
+            "r": 0,
+            "sd": 3,
+            "c": "#ffffff"
+          }
+        ]
+      },
+      {
+        "c": "#32373b",
+        "o": 0.94,
+        "fin": "jelly",
+        "des": "none",
+        "dc": "#ffffff",
+        "mo": [],
+        "it": [
+          {
+            "k": "cyb2",
+            "x": 0,
+            "y": 0.51,
+            "s": 1.5,
+            "r": 0,
+            "sd": 3,
+            "c": "#ffffff"
+          }
+        ]
+      },
+      {
+        "c": "#b9c1c8",
+        "o": 0.94,
+        "fin": "chrome",
+        "des": "none",
+        "dc": "#ffffff",
+        "mo": [],
+        "it": []
+      }
+    ]
+  },
+  "rec": [],
+  "sel": 3
+}

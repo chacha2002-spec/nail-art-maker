@@ -1,0 +1,182 @@
+{
+  "app": "nail-atelier",
+  "version": 1,
+  "st": {
+    "shape": "almond",
+    "len": 0.66,
+    "nails": [
+      {
+        "c": "#264d43",
+        "o": 0.94,
+        "fin": "jelly",
+        "des": "none",
+        "dc": "#ffffff",
+        "mo": [],
+        "it": [
+          {
+            "k": "rom13",
+            "x": 0,
+            "y": 0.5,
+            "s": 1.55,
+            "r": 0,
+            "sd": 3,
+            "c": "#ffffff"
+          }
+        ]
+      },
+      {
+        "c": "#f3eadb",
+        "o": 0.94,
+        "fin": "milky",
+        "des": "none",
+        "dc": "#ffffff",
+        "mo": [],
+        "it": [
+          {
+            "k": "rom10",
+            "x": 0,
+            "y": 0.5,
+            "s": 1.7,
+            "r": 0,
+            "sd": 3,
+            "c": "#ffffff"
+          }
+        ]
+      },
+      {
+        "c": "#8a2a37",
+        "o": 0.94,
+        "fin": "jelly",
+        "des": "none",
+        "dc": "#ffffff",
+        "mo": [],
+        "it": [
+          {
+            "k": "rom14",
+            "x": 0,
+            "y": 0.57,
+            "s": 1.65,
+            "r": 0,
+            "sd": 3,
+            "c": "#ffffff"
+          }
+        ]
+      },
+      {
+        "c": "#31584a",
+        "o": 0.94,
+        "fin": "jelly",
+        "des": "horizontal",
+        "dc": "#eee7dc",
+        "mo": [],
+        "it": []
+      },
+      {
+        "c": "#f5ecdf",
+        "o": 0.94,
+        "fin": "milky",
+        "des": "none",
+        "dc": "#ffffff",
+        "mo": [],
+        "it": [
+          {
+            "k": "rom15",
+            "x": 0,
+            "y": 0.5,
+            "s": 1.6,
+            "r": 0,
+            "sd": 3,
+            "c": "#ffffff"
+          }
+        ]
+      },
+      {
+        "c": "#f5ecdf",
+        "o": 0.94,
+        "fin": "milky",
+        "des": "none",
+        "dc": "#ffffff",
+        "mo": [],
+        "it": [
+          {
+            "k": "rom15",
+            "x": 0,
+            "y": 0.5,
+            "s": 1.6,
+            "r": 0,
+            "sd": 3,
+            "c": "#ffffff"
+          }
+        ]
+      },
+      {
+        "c": "#31584a",
+        "o": 0.94,
+        "fin": "jelly",
+        "des": "horizontal",
+        "dc": "#eee7dc",
+        "mo": [],
+        "it": []
+      },
+      {
+        "c": "#8a2a37",
+        "o": 0.94,
+        "fin": "jelly",
+        "des": "none",
+        "dc": "#ffffff",
+        "mo": [],
+        "it": [
+          {
+            "k": "rom14",
+            "x": 0,
+            "y": 0.57,
+            "s": 1.65,
+            "r": 0,
+            "sd": 3,
+            "c": "#ffffff"
+          }
+        ]
+      },
+      {
+        "c": "#f3eadb",
+        "o": 0.94,
+        "fin": "milky",
+        "des": "none",
+        "dc": "#ffffff",
+        "mo": [],
+        "it": [
+          {
+            "k": "rom10",
+            "x": 0,
+            "y": 0.5,
+            "s": 1.7,
+            "r": 0,
+            "sd": 3,
+            "c": "#ffffff"
+          }
+        ]
+      },
+      {
+        "c": "#264d43",
+        "o": 0.94,
+        "fin": "jelly",
+        "des": "none",
+        "dc": "#ffffff",
+        "mo": [],
+        "it": [
+          {
+            "k": "rom13",
+            "x": 0,
+            "y": 0.5,
+            "s": 1.55,
+            "r": 0,
+            "sd": 3,
+            "c": "#ffffff"
+          }
+        ]
+      }
+    ]
+  },
+  "rec": [],
+  "sel": 3
+}

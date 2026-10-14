@@ -1,0 +1,238 @@
+{
+  "app": "nail-atelier",
+  "version": 1,
+  "st": {
+    "shape": "almond",
+    "len": 0.66,
+    "nails": [
+      {
+        "c": "#e7a7bc",
+        "o": 0.94,
+        "fin": "jelly",
+        "des": "none",
+        "dc": "#ffffff",
+        "mo": [],
+        "it": [
+          {
+            "k": "rom1",
+            "x": 0,
+            "y": 0.57,
+            "s": 1.55,
+            "r": 0,
+            "sd": 3,
+            "c": "#ffffff"
+          }
+        ]
+      },
+      {
+        "c": "#f2e8df",
+        "o": 0.94,
+        "fin": "milky",
+        "des": "none",
+        "dc": "#ffffff",
+        "mo": [],
+        "it": [
+          {
+            "k": "rom2",
+            "x": 0,
+            "y": 0.51,
+            "s": 1.55,
+            "r": 0,
+            "sd": 3,
+            "c": "#ffffff"
+          }
+        ]
+      },
+      {
+        "c": "#f1cbd9",
+        "o": 0.94,
+        "fin": "milky",
+        "des": "none",
+        "dc": "#ffffff",
+        "mo": [],
+        "it": [
+          {
+            "k": "rom7",
+            "x": 0,
+            "y": 0.5,
+            "s": 1.65,
+            "r": 0,
+            "sd": 3,
+            "c": "#ffffff"
+          }
+        ]
+      },
+      {
+        "c": "#d999ae",
+        "o": 0.94,
+        "fin": "jelly",
+        "des": "none",
+        "dc": "#ffffff",
+        "mo": [],
+        "it": [
+          {
+            "k": "rom0",
+            "x": 0,
+            "y": 0.58,
+            "s": 1.55,
+            "r": 0,
+            "sd": 3,
+            "c": "#ffffff"
+          }
+        ]
+      },
+      {
+        "c": "#f7e9ee",
+        "o": 0.94,
+        "fin": "milky",
+        "des": "none",
+        "dc": "#ffffff",
+        "mo": [],
+        "it": [
+          {
+            "k": "pearl",
+            "x": -0.18,
+            "y": 0.69,
+            "s": 0.6,
+            "r": 0,
+            "sd": 3,
+            "c": "#ffffff"
+          },
+          {
+            "k": "pearl",
+            "x": 0.15,
+            "y": 0.5,
+            "s": 0.65,
+            "r": 0,
+            "sd": 3,
+            "c": "#ffffff"
+          },
+          {
+            "k": "pearl",
+            "x": -0.05,
+            "y": 0.3,
+            "s": 0.55,
+            "r": 0,
+            "sd": 3,
+            "c": "#ffffff"
+          }
+        ]
+      },
+      {
+        "c": "#f7e9ee",
+        "o": 0.94,
+        "fin": "milky",
+        "des": "none",
+        "dc": "#ffffff",
+        "mo": [],
+        "it": [
+          {
+            "k": "pearl",
+            "x": -0.18,
+            "y": 0.69,
+            "s": 0.6,
+            "r": 0,
+            "sd": 3,
+            "c": "#ffffff"
+          },
+          {
+            "k": "pearl",
+            "x": 0.15,
+            "y": 0.5,
+            "s": 0.65,
+            "r": 0,
+            "sd": 3,
+            "c": "#ffffff"
+          },
+          {
+            "k": "pearl",
+            "x": -0.05,
+            "y": 0.3,
+            "s": 0.55,
+            "r": 0,
+            "sd": 3,
+            "c": "#ffffff"
+          }
+        ]
+      },
+      {
+        "c": "#d999ae",
+        "o": 0.94,
+        "fin": "jelly",
+        "des": "none",
+        "dc": "#ffffff",
+        "mo": [],
+        "it": [
+          {
+            "k": "rom0",
+            "x": 0,
+            "y": 0.58,
+            "s": 1.55,
+            "r": 0,
+            "sd": 3,
+            "c": "#ffffff"
+          }
+        ]
+      },
+      {
+        "c": "#f1cbd9",
+        "o": 0.94,
+        "fin": "milky",
+        "des": "none",
+        "dc": "#ffffff",
+        "mo": [],
+        "it": [
+          {
+            "k": "rom7",
+            "x": 0,
+            "y": 0.5,
+            "s": 1.65,
+            "r": 0,
+            "sd": 3,
+            "c": "#ffffff"
+          }
+        ]
+      },
+      {
+        "c": "#f2e8df",
+        "o": 0.94,
+        "fin": "milky",
+        "des": "none",
+        "dc": "#ffffff",
+        "mo": [],
+        "it": [
+          {
+            "k": "rom2",
+            "x": 0,
+            "y": 0.51,
+            "s": 1.55,
+            "r": 0,
+            "sd": 3,
+            "c": "#ffffff"
+          }
+        ]
+      },
+      {
+        "c": "#e7a7bc",
+        "o": 0.94,
+        "fin": "jelly",
+        "des": "none",
+        "dc": "#ffffff",
+        "mo": [],
+        "it": [
+          {
+            "k": "rom1",
+            "x": 0,
+            "y": 0.57,
+            "s": 1.55,
+            "r": 0,
+            "sd": 3,
+            "c": "#ffffff"
+          }
+        ]
+      }
+    ]
+  },
+  "rec": [],
+  "sel": 3
+}

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://chacha2002-spec.github.io/nail-art-maker/sitemap.xml
