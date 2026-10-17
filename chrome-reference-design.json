@@ -1,0 +1,205 @@
+{
+  "app": "nail-atelier",
+  "version": 1,
+  "st": {
+    "shape": "almond",
+    "len": 0.58,
+    "nails": [
+      {
+        "c": "#bac5c5",
+        "o": 0.78,
+        "fin": "domedgloss",
+        "des": "none",
+        "dc": "#bbc3cf",
+        "dl": [
+          {
+            "k": "cyberflame",
+            "c": "#bbc3cf"
+          }
+        ],
+        "mo": [],
+        "it": []
+      },
+      {
+        "c": "#bac5c5",
+        "o": 0.78,
+        "fin": "domedgloss",
+        "des": "none",
+        "dc": "#bbc3cf",
+        "dl": [],
+        "mo": [],
+        "it": [
+          {
+            "k": "atlas2",
+            "x": 0,
+            "y": 0.54,
+            "s": 1.4,
+            "r": 0,
+            "sd": 23,
+            "c": "#c4ccd0"
+          }
+        ]
+      },
+      {
+        "c": "#bac5c5",
+        "o": 0.78,
+        "fin": "domedgloss",
+        "des": "none",
+        "dc": "#bbc3cf",
+        "dl": [],
+        "mo": [],
+        "it": [
+          {
+            "k": "cyb2",
+            "x": 0,
+            "y": 0.54,
+            "s": 1.65,
+            "r": 0,
+            "sd": 23,
+            "c": "#c4ccd0"
+          }
+        ]
+      },
+      {
+        "c": "#bac5c5",
+        "o": 0.78,
+        "fin": "domedgloss",
+        "des": "none",
+        "dc": "#bbc3cf",
+        "dl": [
+          {
+            "k": "chromespiral",
+            "c": "#bbc3cf"
+          }
+        ],
+        "mo": [],
+        "it": []
+      },
+      {
+        "c": "#bac5c5",
+        "o": 0.78,
+        "fin": "domedgloss",
+        "des": "none",
+        "dc": "#bbc3cf",
+        "dl": [
+          {
+            "k": "liquidorbit",
+            "c": "#bbc3cf"
+          }
+        ],
+        "mo": [],
+        "it": []
+      },
+      {
+        "c": "#060708",
+        "o": 1,
+        "fin": "jelly",
+        "des": "none",
+        "dc": "#bbc3cf",
+        "dl": [
+          {
+            "k": "cyberflame",
+            "c": "#bbc3cf"
+          }
+        ],
+        "mo": [],
+        "it": []
+      },
+      {
+        "c": "#060708",
+        "o": 1,
+        "fin": "jelly",
+        "des": "none",
+        "dc": "#bbc3cf",
+        "dl": [],
+        "mo": [],
+        "it": [
+          {
+            "k": "atlas2",
+            "x": 0,
+            "y": 0.62,
+            "s": 1.25,
+            "r": 0,
+            "sd": 23,
+            "c": "#c4ccd0"
+          },
+          {
+            "k": "cyb2",
+            "x": 0,
+            "y": 0.24,
+            "s": 0.6,
+            "r": 0,
+            "sd": 23,
+            "c": "#c4ccd0"
+          }
+        ]
+      },
+      {
+        "c": "#060708",
+        "o": 1,
+        "fin": "jelly",
+        "des": "none",
+        "dc": "#bbc3cf",
+        "dl": [
+          {
+            "k": "liquidorbit",
+            "c": "#bbc3cf"
+          }
+        ],
+        "mo": [],
+        "it": [
+          {
+            "k": "stone",
+            "x": 0,
+            "y": 0.53,
+            "s": 0.9,
+            "r": 0,
+            "sd": 23,
+            "c": "#c4ccd0"
+          }
+        ]
+      },
+      {
+        "c": "#060708",
+        "o": 1,
+        "fin": "jelly",
+        "des": "none",
+        "dc": "#bbc3cf",
+        "dl": [
+          {
+            "k": "chromespiral",
+            "c": "#bbc3cf"
+          }
+        ],
+        "mo": [],
+        "it": []
+      },
+      {
+        "c": "#060708",
+        "o": 1,
+        "fin": "jelly",
+        "des": "none",
+        "dc": "#bbc3cf",
+        "dl": [],
+        "mo": [],
+        "it": [
+          {
+            "k": "cyb5",
+            "x": 0,
+            "y": 0.53,
+            "s": 1.65,
+            "r": 0,
+            "sd": 23,
+            "c": "#c4ccd0"
+          }
+        ]
+      }
+    ]
+  },
+  "rec": [
+    "#c3ccce",
+    "#111416",
+    "#bbc3cf"
+  ],
+  "sel": 2
+}

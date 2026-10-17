@@ -3,216 +3,203 @@
   "version": 1,
   "st": {
     "shape": "almond",
-    "len": 0.66,
+    "len": 0.58,
     "nails": [
       {
-        "c": "#b9c1c8",
-        "o": 0.94,
-        "fin": "chrome",
+        "c": "#bac5c5",
+        "o": 0.78,
+        "fin": "domedgloss",
         "des": "none",
-        "dc": "#ffffff",
+        "dc": "#bbc3cf",
+        "dl": [
+          {
+            "k": "cyberflame",
+            "c": "#bbc3cf"
+          }
+        ],
         "mo": [],
         "it": []
       },
       {
-        "c": "#32373b",
-        "o": 0.94,
-        "fin": "jelly",
+        "c": "#bac5c5",
+        "o": 0.78,
+        "fin": "domedgloss",
         "des": "none",
-        "dc": "#ffffff",
+        "dc": "#bbc3cf",
+        "dl": [],
+        "mo": [],
+        "it": [
+          {
+            "k": "atlas2",
+            "x": 0,
+            "y": 0.54,
+            "s": 1.4,
+            "r": 0,
+            "sd": 23,
+            "c": "#c4ccd0"
+          }
+        ]
+      },
+      {
+        "c": "#bac5c5",
+        "o": 0.78,
+        "fin": "domedgloss",
+        "des": "none",
+        "dc": "#bbc3cf",
+        "dl": [],
         "mo": [],
         "it": [
           {
             "k": "cyb2",
             "x": 0,
-            "y": 0.51,
-            "s": 1.5,
+            "y": 0.54,
+            "s": 1.65,
             "r": 0,
-            "sd": 3,
-            "c": "#ffffff"
+            "sd": 23,
+            "c": "#c4ccd0"
           }
         ]
       },
       {
-        "c": "#cad1d4",
-        "o": 0.94,
-        "fin": "chrome",
+        "c": "#bac5c5",
+        "o": 0.78,
+        "fin": "domedgloss",
         "des": "none",
-        "dc": "#ffffff",
-        "mo": [],
-        "it": [
+        "dc": "#bbc3cf",
+        "dl": [
           {
-            "k": "cyb6",
-            "x": 0,
-            "y": 0.5,
-            "s": 1.5,
-            "r": 0,
-            "sd": 3,
-            "c": "#ffffff"
+            "k": "chromespiral",
+            "c": "#bbc3cf"
           }
-        ]
+        ],
+        "mo": [],
+        "it": []
       },
       {
-        "c": "#ebe8e3",
-        "o": 0.94,
-        "fin": "milky",
+        "c": "#bac5c5",
+        "o": 0.78,
+        "fin": "domedgloss",
         "des": "none",
-        "dc": "#ffffff",
-        "mo": [],
-        "it": [
+        "dc": "#bbc3cf",
+        "dl": [
           {
-            "k": "stud",
-            "x": -0.18,
-            "y": 0.7,
-            "s": 0.6,
-            "r": 0,
-            "sd": 3,
-            "c": "#ffffff"
-          },
-          {
-            "k": "stud",
-            "x": 0.14,
-            "y": 0.5,
-            "s": 0.5,
-            "r": 0,
-            "sd": 3,
-            "c": "#ffffff"
-          },
-          {
-            "k": "stud",
-            "x": -0.1,
-            "y": 0.3,
-            "s": 0.45,
-            "r": 0,
-            "sd": 3,
-            "c": "#ffffff"
+            "k": "liquidorbit",
+            "c": "#bbc3cf"
           }
-        ]
+        ],
+        "mo": [],
+        "it": []
       },
       {
-        "c": "#777f86",
-        "o": 0.94,
-        "fin": "cateye",
-        "des": "none",
-        "dc": "#ffffff",
-        "mo": [],
-        "it": [
-          {
-            "k": "mstar",
-            "x": 0,
-            "y": 0.52,
-            "s": 1.1,
-            "r": 0,
-            "sd": 3,
-            "c": "#ffffff"
-          }
-        ]
-      },
-      {
-        "c": "#777f86",
-        "o": 0.94,
-        "fin": "cateye",
-        "des": "none",
-        "dc": "#ffffff",
-        "mo": [],
-        "it": [
-          {
-            "k": "mstar",
-            "x": 0,
-            "y": 0.52,
-            "s": 1.1,
-            "r": 0,
-            "sd": 3,
-            "c": "#ffffff"
-          }
-        ]
-      },
-      {
-        "c": "#ebe8e3",
-        "o": 0.94,
-        "fin": "milky",
-        "des": "none",
-        "dc": "#ffffff",
-        "mo": [],
-        "it": [
-          {
-            "k": "stud",
-            "x": -0.18,
-            "y": 0.7,
-            "s": 0.6,
-            "r": 0,
-            "sd": 3,
-            "c": "#ffffff"
-          },
-          {
-            "k": "stud",
-            "x": 0.14,
-            "y": 0.5,
-            "s": 0.5,
-            "r": 0,
-            "sd": 3,
-            "c": "#ffffff"
-          },
-          {
-            "k": "stud",
-            "x": -0.1,
-            "y": 0.3,
-            "s": 0.45,
-            "r": 0,
-            "sd": 3,
-            "c": "#ffffff"
-          }
-        ]
-      },
-      {
-        "c": "#cad1d4",
-        "o": 0.94,
-        "fin": "chrome",
-        "des": "none",
-        "dc": "#ffffff",
-        "mo": [],
-        "it": [
-          {
-            "k": "cyb6",
-            "x": 0,
-            "y": 0.5,
-            "s": 1.5,
-            "r": 0,
-            "sd": 3,
-            "c": "#ffffff"
-          }
-        ]
-      },
-      {
-        "c": "#32373b",
-        "o": 0.94,
+        "c": "#060708",
+        "o": 1,
         "fin": "jelly",
         "des": "none",
-        "dc": "#ffffff",
+        "dc": "#bbc3cf",
+        "dl": [
+          {
+            "k": "cyberflame",
+            "c": "#bbc3cf"
+          }
+        ],
+        "mo": [],
+        "it": []
+      },
+      {
+        "c": "#060708",
+        "o": 1,
+        "fin": "jelly",
+        "des": "none",
+        "dc": "#bbc3cf",
+        "dl": [],
         "mo": [],
         "it": [
+          {
+            "k": "atlas2",
+            "x": 0,
+            "y": 0.62,
+            "s": 1.25,
+            "r": 0,
+            "sd": 23,
+            "c": "#c4ccd0"
+          },
           {
             "k": "cyb2",
             "x": 0,
-            "y": 0.51,
-            "s": 1.5,
+            "y": 0.24,
+            "s": 0.6,
             "r": 0,
-            "sd": 3,
-            "c": "#ffffff"
+            "sd": 23,
+            "c": "#c4ccd0"
           }
         ]
       },
       {
-        "c": "#b9c1c8",
-        "o": 0.94,
-        "fin": "chrome",
+        "c": "#060708",
+        "o": 1,
+        "fin": "jelly",
         "des": "none",
-        "dc": "#ffffff",
+        "dc": "#bbc3cf",
+        "dl": [
+          {
+            "k": "liquidorbit",
+            "c": "#bbc3cf"
+          }
+        ],
+        "mo": [],
+        "it": [
+          {
+            "k": "stone",
+            "x": 0,
+            "y": 0.53,
+            "s": 0.9,
+            "r": 0,
+            "sd": 23,
+            "c": "#c4ccd0"
+          }
+        ]
+      },
+      {
+        "c": "#060708",
+        "o": 1,
+        "fin": "jelly",
+        "des": "none",
+        "dc": "#bbc3cf",
+        "dl": [
+          {
+            "k": "chromespiral",
+            "c": "#bbc3cf"
+          }
+        ],
         "mo": [],
         "it": []
+      },
+      {
+        "c": "#060708",
+        "o": 1,
+        "fin": "jelly",
+        "des": "none",
+        "dc": "#bbc3cf",
+        "dl": [],
+        "mo": [],
+        "it": [
+          {
+            "k": "cyb5",
+            "x": 0,
+            "y": 0.53,
+            "s": 1.65,
+            "r": 0,
+            "sd": 23,
+            "c": "#c4ccd0"
+          }
+        ]
       }
     ]
   },
-  "rec": [],
-  "sel": 3
+  "rec": [
+    "#c3ccce",
+    "#111416",
+    "#bbc3cf"
+  ],
+  "sel": 2
 }

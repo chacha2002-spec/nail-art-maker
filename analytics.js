@@ -6,7 +6,8 @@
   if (location.protocol !== 'https:' || location.hostname !== 'chacha2002-spec.github.io') return;
   if (!location.pathname.startsWith('/nail-art-maker/')) return;
   var language = ['en','ja'].includes(document.documentElement.lang) ? document.documentElement.lang : 'ko';
-  var copy = {ko:['방문 통계 선택','방문 통계를 수집해도 될까요? Google Analytics로 이용 현황을 확인합니다. 거부해도 모든 편집 기능을 사용할 수 있어요.','허용','거부','자세히'],en:['Visitor statistics choice','May we collect visitor statistics with Google Analytics? You can decline and still use every editing feature.','Allow','Decline','Details'],ja:['訪問統計の選択','Google Analyticsで訪問統計を収集してもよいですか？拒否しても全ての編集機能を利用できます。','許可','拒否','詳細']}[language];
+  var consentCopy = {ko:['방문 통계 선택','얼마나 많은 분들이 사용했는지 궁금해요! 방문 수를 확인해도 될까요? 거부해도 모든 기능을 편하게 쓸 수 있어요.','허용','거부','자세히'],en:['Visitor statistics choice','May we collect visitor statistics with Google Analytics? You can decline and still use every editing feature.','Allow','Decline','Details'],ja:['訪問統計の選択','Google Analyticsで訪問統計を収集してもよいですか？拒否しても全ての編集機能を利用できます。','許可','拒否','詳細']};
+  var copy = consentCopy[language];
   var choiceKey = 'nail-statistics-consent-v1', banner;
   function readChoice() { try { return localStorage.getItem(choiceKey); } catch (_) { return null; } }
   function record(value) { try { localStorage.setItem(choiceKey, value); } catch (_) {} }
@@ -71,7 +72,7 @@
     var link = document.createElement('a'); link.href = '/nail-art-maker/privacy' + (language === 'ko' ? '' : '-' + language) + '.html'; link.textContent = copy[4]; link.style.cssText = 'margin-left:auto;color:#665650;font-size:13px'; actions.appendChild(link);
     banner.appendChild(actions); document.body.appendChild(banner);
   }
-  window.addEventListener('nail-language-change', function(){ language = document.documentElement.lang; copy = {ko:['방문 통계 선택','방문 통계를 수집해도 될까요? Google Analytics로 이용 현황을 확인합니다. 거부해도 모든 편집 기능을 사용할 수 있어요.','허용','거부','자세히'],en:['Visitor statistics choice','May we collect visitor statistics with Google Analytics? You can decline and still use every editing feature.','Allow','Decline','Details'],ja:['訪問統計の選択','Google Analyticsで訪問統計を収集してもよいですか？拒否しても全ての編集機能を利用できます。','許可','拒否','詳細']}[language]; if (banner) { removeBanner(); show(); } });
+  window.addEventListener('nail-language-change', function(){ language = document.documentElement.lang; copy = consentCopy[language]; if (banner) { removeBanner(); show(); } });
   window.nailStatisticsSettings = show;
   document.querySelectorAll('[data-statistics-settings]').forEach(function (b) { b.addEventListener('click', show); });
   var choice = readChoice();
