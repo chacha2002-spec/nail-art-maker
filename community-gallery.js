@@ -1,18 +1,19 @@
 (async function(){
 'use strict';
 const $=id=>document.getElementById(id),t=JSON.parse($('gallery-copy').textContent),config=window.NailGalleryConfig||{};
+$('art-edit').dataset.defaultLabel=$('art-edit').textContent;
 const upload=$('upload-dialog'),art=$('art-dialog'),form=$('upload-form'),feed=$('community-feed');
 let removeArmed=false,client=null,owner=null,blob=null,previewURL=null,selected=null,busy=false,offset=0,loading=false;
 const locale=document.documentElement.lang||'ko',pageSize=24;
 const date=value=>new Date(value).toLocaleDateString(locale,{year:'numeric',month:'short',day:'numeric'});
 const text=(tag,value,className)=>{const el=document.createElement(tag);el.textContent=value;if(className)el.className=className;return el};
 const publicImage=path=>client.storage.from('nail-gallery').getPublicUrl(path).data.publicUrl;
-function showArt(post){removeArmed=false;$('remove-post').textContent=t.remove;selected=post;$('art-title').textContent=post.title;$('art-image').src=post.image;$('art-image').alt=post.title;$('art-author').textContent=post.nickname;$('art-date').textContent=post.created_at?date(post.created_at):'';$('art-caption').textContent=post.caption||'';$('art-status').textContent='';$('remove-post').hidden=!(client&&owner&&post.owner_id===owner);const edit=$('art-edit');edit.hidden=!post.edit;if(post.edit)edit.href=post.edit;$('report-post').href='https://github.com/chacha2002-spec/nail-art-maker/issues/new?title='+encodeURIComponent('Gallery post: '+(post.id||post.title));art.showModal()}
+function showArt(post){removeArmed=false;$('remove-post').textContent=t.remove;selected=post;$('art-title').textContent=post.title;$('art-image').src=post.image;$('art-image').alt=post.title;$('art-author').textContent=post.nickname;$('art-date').textContent=post.created_at?date(post.created_at):'';$('art-caption').textContent=post.caption||'';$('art-status').textContent='';$('remove-post').hidden=!(client&&owner&&post.owner_id===owner);const edit=$('art-edit');edit.hidden=!post.edit;if(post.edit){edit.href=post.edit;edit.textContent=post.editLabel||edit.dataset.defaultLabel||edit.textContent;} $('report-post').href='https://github.com/chacha2002-spec/nail-art-maker/issues/new?title='+encodeURIComponent('Gallery post: '+(post.id||post.title));art.showModal()}
 function card(post){const item=text('article','','work-card'),button=text('button','','image-button'),img=new Image();img.src=post.image;img.alt=post.title;img.loading='lazy';button.append(img);button.addEventListener('click',()=>showArt(post));const copy=text('div','','work-copy');copy.append(text('span',post.nickname,'byline'),text('h3',post.title));if(post.caption)copy.append(text('p',post.caption));copy.append(text('time',date(post.created_at)));item.dataset.post=post.id;item.append(button,copy);return item}
 $('open-upload').addEventListener('click',()=>upload.showModal());
 for(const dialog of [upload,art])dialog.querySelector('.close-dialog').addEventListener('click',()=>{if(!busy)dialog.close()});
 upload.addEventListener('cancel',e=>{if(busy)e.preventDefault()});
-document.querySelectorAll('[data-gallery-image]').forEach(button=>button.addEventListener('click',()=>showArt({title:button.dataset.title,image:button.dataset.galleryImage,caption:button.dataset.caption,nickname:'',edit:button.closest('article').querySelector('.gallery-edit')?.href})));
+document.querySelectorAll('[data-gallery-image]').forEach(button=>button.addEventListener('click',()=>showArt({title:button.dataset.title,image:button.dataset.galleryImage,caption:button.dataset.caption,nickname:'',edit:button.closest('article').querySelector('.gallery-edit')?.href,editLabel:button.closest('article').querySelector('.gallery-edit')?.textContent})));
 async function prepareImage(file){
  blob=null;$('publish-button').disabled=true;$('upload-status').textContent='';
  if(previewURL){URL.revokeObjectURL(previewURL);previewURL=null}$('upload-preview').hidden=true;$('choose-prompt').hidden=false;
