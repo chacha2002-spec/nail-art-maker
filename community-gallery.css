@@ -3,3 +3,5 @@
 .site-header,.open-editor{border-color:var(--gallery-line)}a:hover{color:#596d8b}footer{border-color:var(--gallery-line);color:var(--gallery-muted)}
 
 .site-header .open-editor{background:#343b47;border-color:#343b47;color:#fff}.site-header .open-editor:hover{background:#465165;color:#fff}
+
+.gallery-edit{display:inline-flex;align-items:center;justify-content:center;margin-top:16px;padding:10px 14px;border-radius:8px;background:#343b47;color:#fff;font-size:13px;line-height:1.5;text-decoration:none}.gallery-edit:hover{background:#465165;color:#fff}

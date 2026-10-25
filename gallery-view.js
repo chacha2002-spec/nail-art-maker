@@ -5,6 +5,7 @@
   const title = document.getElementById('art-title');
   const image = document.getElementById('art-image');
   const caption = document.getElementById('art-caption');
+  const edit = document.getElementById('art-edit');
   let trigger = null;
   document.querySelectorAll('[data-gallery-image]').forEach(button => {
     button.addEventListener('click', () => {
@@ -13,6 +14,8 @@
       image.src = button.dataset.galleryImage;
       image.alt = button.dataset.title;
       caption.textContent = button.dataset.caption || '';
+      const link = button.closest('article').querySelector('.gallery-edit');
+      edit.href = link.href;
       dialog.showModal();
     });
   });
