@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="./utilities.css?v=89a5b3c07da8">
 <script src="./react-18.3.1.min.js?v=d949f1c3687a"></script>
 <script src="./react-dom-18.3.1.min.js?v=35f4f974f4b2"></script>
-<script src="./htm-3.1.1.min.js?v=7a31776e04bd"></script><script src="./i18n.js?v=45f3de0fe2ee"></script><script src="./tutorial.js?v=ca26ef2b856e"></script>
+<script src="./htm-3.1.1.min.js?v=7a31776e04bd"></script><script src="./i18n.js?v=5e18059f7f89"></script><script src="./tutorial.js?v=ca26ef2b856e"></script>
 <style>
 @font-face{font-family:NailStudioSans;font-weight:45 920;font-display:swap;src:url("./NailStudioSans.woff2") format("woff2-variations")}
 :root{--bg:#fcfcfc;--preview:#fdfdfd;--fg:#1b1819;--mut:#8b8487;--line:#e5e5e5;--card:#fff;--selected:#646464;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px)}
@@ -66,6 +66,7 @@ input[type=range].spec{accent-color:initial;-webkit-appearance:none;appearance:n
 <link rel="icon" type="image/png" sizes="2048x2048" href="./nail-logo.png">
 <link rel="apple-touch-icon" href="./nail-logo.png">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"네일아트 만들기 | 무료 네일 디자인 시뮬레이터","url":"https://chacha2002-spec.github.io/nail-art-maker/","description":"나만의 네일아트를 무료로 만들어 보세요. 시럽네일, 프렌치네일, 그라데이션과 리본·진주 파츠를 조합하는 네일 디자인 시뮬레이터. 셀프네일 아이디어와 네일숍에 보여줄 도안을 만들고 이미지로 저장하세요.","inLanguage":["ko","en","ja"],"applicationCategory":"LifestyleApplication","operatingSystem":"Web browser","isAccessibleForFree":true,"keywords":["네일아트 만들기","네일 디자인","셀프네일","네일 시뮬레이터"]}</script><meta name="google-adsense-account" content="ca-pub-1806175755394564"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1806175755394564" crossorigin="anonymous"></script><style>.shape-options{grid-template-columns:repeat(6,minmax(0,1fr))}@media(max-width:420px){.shape-options{grid-template-columns:repeat(3,minmax(0,1fr))}}</style></head><body><div id="root"><main class="editor-loading"><h1>나만의 네일아트를 무료로 만들어 보세요.</h1><p>나만의 네일아트를 무료로 만들어 보세요. 시럽네일, 프렌치네일, 그라데이션과 리본·진주 파츠를 조합하는 네일 디자인 시뮬레이터. 셀프네일 아이디어와 네일숍에 보여줄 도안을 만들고 이미지로 저장하세요.</p><nav aria-label="언어별 편집기"><a href="./editor-ko.html" lang="ko">한국어</a> · <a href="./editor-en.html" lang="en">English</a> · <a href="./editor-ja.html" lang="ja">日本語</a></nav><noscript><p>편집기를 이용하려면 JavaScript를 켜 주세요.</p></noscript></main></div>
+<script src="./gallery-draft.js?v=3aa2e3ac1af6"></script>
 <script>
 const {useState,useRef,useEffect}=React;let html=htm.bind(window.NailI18n.elementFactory(React));window.addEventListener('nail-language-change',()=>{html=htm.bind(window.NailI18n.elementFactory(React))});
 const mix=(a,b,t)=>{const p=h=>{if(h.length===4)h='#'+h[1]+h[1]+h[2]+h[2]+h[3]+h[3];return [1,3,5].map(i=>parseInt(h.slice(i,i+2),16))};const x=p(a),y=p(b);return '#'+x.map((v,i)=>Math.round(v+(y[i]-v)*t).toString(16).padStart(2,'0')).join('')};
@@ -429,6 +430,8 @@ async function embeddedAsset(src){if(src.startsWith('data:'))return src;if(!ASSE
 const T=({l,on,fn,child})=>html`<button data-sel=${on?'1':null} className="tile rounded-sm py-2 flex flex-col items-center gap-0.5" aria-pressed=${on} onClick=${fn}>${child}${l}</button>`;
 const StaticDefs=React.memo(Defs);
 function App(){
+ async function shareToGallery(){try{await window.NailGalleryDraft.save(saved);const lang=window.NailI18n.language;location.assign('./'+(lang==='ko'?'examples.html':'examples-'+lang+'.html')+'?upload=editor')}catch(_){setNotice('갤러리로 이미지를 보내지 못했어요. 파일로 저장한 뒤 갤러리에서 올려주세요.')}}
+
  const [localeTick,setLocaleTick]=useState(0);useEffect(()=>{const refresh=()=>setLocaleTick(v=>v+1);window.addEventListener('nail-language-change',refresh);return()=>window.removeEventListener('nail-language-change',refresh)},[]);
  const [boot]=useState(readDraft);const [st,setRawSt]=useState(boot.st);const [hist,setHist]=useState(boot.hist);const [redo,setRedo]=useState(Array.isArray(boot.redo)?boot.redo.filter(validState).slice(-40):[]);const setSt=next=>{setRedo([]);setRawSt(next)};const last=useRef({k:'',t:0}),gs=useRef(false);
  const [partEditOpen,setPartEditOpen]=useState(false),[previewTick,setPreviewTick]=useState(0);const transferSelection=useRef(null);const [partCategory,setPartCategory]=useState('전체');const partVisible=k=>partCategory==='전체'||PART_CATEGORIES.find(c=>c[0]===partCategory)[1].includes(k);const [sel,setSel]=useState(boot.sel);const mode='tips';const [tab,setTab]=useState('base');
@@ -539,7 +542,7 @@ function App(){
 
  <input ref=${fileInput} type="file" accept=".json,application/json" aria-label="작업 파일 선택" style=${{display:'none'}} onChange=${importWork}/>
 
- ${saved&&html`<div className="fixed inset-0 z-50 flex items-center justify-center p-5" style=${{background:'rgba(20,16,18,.55)'}} onClick=${()=>setSaved(null)}><div className="max-w-[560px] w-full p-4 text-center" style=${{background:'var(--bg)'}} onClick=${e=>e.stopPropagation()}><img src=${saved} alt="완성된 네일 디자인" className="w-full"/><p className="text-xs my-3" style=${{color:'var(--mut)'}}>이미지를 길게 누르거나 우클릭해서 저장하세요.</p><div className="flex gap-2"><button className="tile flex-1 py-3" onClick=${()=>setSaved(null)}>닫기</button><a href=${saved} download="나만의-네일.png" className="tile export-download flex-1 py-3">파일로 받기</a></div></div></div>`}
+ ${saved&&html`<div className="fixed inset-0 z-50 flex items-center justify-center p-5" style=${{background:'rgba(20,16,18,.55)'}} onClick=${()=>setSaved(null)}><div className="max-w-[560px] w-full p-4 text-center" style=${{background:'var(--bg)'}} onClick=${e=>e.stopPropagation()}><img src=${saved} alt="완성된 네일 디자인" className="w-full"/><p className="text-xs my-3" style=${{color:'var(--mut)'}}>이미지를 길게 누르거나 우클릭해서 저장하세요.</p><button className="tile export-download w-full py-3 mb-2" onClick=${shareToGallery}>갤러리에 올리기</button><div className="flex gap-2"><button className="tile flex-1 py-3" onClick=${()=>setSaved(null)}>닫기</button><a href=${saved} download="나만의-네일.png" className="tile export-download flex-1 py-3">파일로 받기</a></div></div></div>`}
  </div>`}
 ReactDOM.createRoot(document.getElementById('root')).render(html`<${App}/>`);
 </script></body></html>

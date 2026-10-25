@@ -13,16 +13,17 @@ $('open-upload').addEventListener('click',()=>upload.showModal());
 for(const dialog of [upload,art])dialog.querySelector('.close-dialog').addEventListener('click',()=>{if(!busy)dialog.close()});
 upload.addEventListener('cancel',e=>{if(busy)e.preventDefault()});
 document.querySelectorAll('[data-gallery-image]').forEach(button=>button.addEventListener('click',()=>showArt({title:button.dataset.title,image:button.dataset.galleryImage,caption:button.dataset.caption,nickname:'',edit:button.closest('article').querySelector('.gallery-edit')?.href})));
-$('design-image').addEventListener('change',async e=>{
+async function prepareImage(file){
  blob=null;$('publish-button').disabled=true;$('upload-status').textContent='';
  if(previewURL){URL.revokeObjectURL(previewURL);previewURL=null}$('upload-preview').hidden=true;$('choose-prompt').hidden=false;
- const file=e.target.files[0];if(!file)return;
- if(!['image/png','image/jpeg','image/webp'].includes(file.type)||file.size>10*1024*1024){$('upload-status').textContent=t.badfile;e.target.value='';return}
+ if(!file)return;
+ if(!['image/png','image/jpeg','image/webp'].includes(file.type)||file.size>10*1024*1024){$('upload-status').textContent=t.badfile;$('design-image').value='';return}
  try{
  const source=URL.createObjectURL(file),img=new Image();try{img.src=source;await img.decode();if(img.width*img.height>40000000)throw Error('large');const scale=Math.min(1,1600/Math.max(img.width,img.height)),canvas=document.createElement('canvas');canvas.width=Math.max(1,Math.round(img.width*scale));canvas.height=Math.max(1,Math.round(img.height*scale));const ctx=canvas.getContext('2d');ctx.fillStyle='#ffffff';ctx.fillRect(0,0,canvas.width,canvas.height);ctx.drawImage(img,0,0,canvas.width,canvas.height);blob=await new Promise(resolve=>canvas.toBlob(resolve,'image/jpeg',.9));if(!blob||blob.size>3*1024*1024)throw Error('size')}finally{URL.revokeObjectURL(source)}
  previewURL=URL.createObjectURL(blob);$('upload-preview').src=previewURL;$('upload-preview').hidden=false;$('choose-prompt').hidden=true;$('publish-button').disabled=!client;
  }catch(_){blob=null;$('upload-status').textContent=t.badfile}
-});
+}
+$('design-image').addEventListener('change',e=>prepareImage(e.target.files[0]));
 async function load(reset=false){if(!client||loading)return;loading=true;const message=$('feed-message');message.hidden=false;message.replaceChildren(text('p',t.loading));$('load-more').hidden=true;
  try{const {data,error}=await client.from('nail_gallery_posts').select('id,owner_id,title,nickname,caption,image_path,created_at').is('deleted_at',null).order('created_at',{ascending:false}).order('id',{ascending:false}).range(reset?0:offset,(reset?0:offset)+pageSize-1);if(error)throw error;if(reset){feed.querySelectorAll('[data-post]').forEach(el=>el.remove());offset=0}data.forEach(post=>feed.insertBefore(card({...post,image:publicImage(post.image_path)}),feed.querySelector('.initial-card')));offset+=data.length;message.hidden=feed.children.length>0;if(!feed.children.length)message.replaceChildren(text('span','✳','empty-art'),text('h3',t.empty),text('p',t.emptybody));$('load-more').hidden=data.length<pageSize;
  }catch(_){message.hidden=false;const retry=text('button',t.retry,'secondary');retry.addEventListener('click',()=>load(reset));message.replaceChildren(text('p',t.error),retry)}finally{loading=false}}
@@ -37,4 +38,8 @@ $('remove-post').addEventListener('click',async()=>{if(!client||!selected||selec
 if(config.url&&config.publishableKey){try{
  const {createClient}=await import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm');client=createClient(config.url,config.publishableKey);const {data:{session}}=await client.auth.getSession();owner=session?.user.id||null;$('connection-note').hidden=true;$('open-upload').hidden=false;$('upload-unavailable').hidden=true;$('publish-button').disabled=!blob;await load(true);
  }catch(_){client=null;$('connection-note').textContent=t.error}}
+if(client&&new URLSearchParams(location.search).get('upload')==='editor'){
+ const url=new URL(location.href);url.searchParams.delete('upload');history.replaceState(null,'',url);
+ try{const image=await window.NailGalleryDraft.take();if(image&&/^data:image\/png;base64,/.test(image)){const response=await fetch(image);const imageBlob=await response.blob();$('design-image').required=false;await prepareImage(new File([imageBlob],'nail-design.png',{type:'image/png'}));upload.showModal();}}catch(_){$('connection-note').hidden=false;$('connection-note').textContent=t.failed}
+}
 })();
