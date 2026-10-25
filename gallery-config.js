@@ -1,2 +1,2 @@
-// Public connection settings only. Never put a service-role key here.
-window.NailGalleryConfig = {url: '', publishableKey: ''};
+// Browser-safe publishable key; access is restricted by database policies.
+window.NailGalleryConfig = {url: 'https://rschoraczhbtkqmpgljq.supabase.co', publishableKey: 'sb_publishable_f_Kgs2vM6ESxz1SlqdlsAw_zlte8dg_'};
